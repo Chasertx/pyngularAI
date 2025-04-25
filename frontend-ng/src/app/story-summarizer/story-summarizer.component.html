@@ -1,0 +1,32 @@
+<div class="theme">
+  <app-toolbar></app-toolbar>
+
+  <!-- Story Summarizer Section -->
+  <div class="summarizer-container">
+    <h2 class="summarizer-title">Story Summarizer</h2>
+
+    <textarea
+      class="summarizer-textarea"
+      [(ngModel)]="text"
+      rows="6"
+      placeholder="Paste your story here..."
+    ></textarea>
+
+    <button
+      class="cta-button"
+      (click)="summarize()"
+      [disabled]="!text || loading"
+    >
+      {{ loading ? "Summarizing..." : "Summarize Story" }}
+    </button>
+
+    <div *ngIf="error" class="summarizer-error">{{ error }}</div>
+
+    <div *ngIf="summary" class="summarizer-result card">
+      <div class="card-body">
+        <h5 class="card-title">Summary</h5>
+        <p class="card-text">{{ summary }}</p>
+      </div>
+    </div>
+  </div>
+</div>
