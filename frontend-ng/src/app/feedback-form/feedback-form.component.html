@@ -1,0 +1,36 @@
+<div class="theme">
+  <app-toolbar></app-toolbar>
+
+  <!-- Feedback Form Section -->
+  <div class="feedback-container">
+    <h2 class="feedback-title">Submit Feedback</h2>
+
+    <textarea
+      class="feedback-textarea"
+      [(ngModel)]="text"
+      rows="4"
+      placeholder="Your feedback..."
+    ></textarea>
+
+    <button class="cta-button" (click)="submit()" [disabled]="loading || !text">
+      Submit
+    </button>
+
+    <div *ngIf="loading" class="feedback-loading">
+      <div class="spinner-border spinner-border-sm" role="status"></div>
+      Analyzing...
+    </div>
+
+    <div *ngIf="error" class="feedback-error">{{ error }}</div>
+
+    <div *ngIf="result" class="feedback-result card">
+      <div class="card-body">
+        <h5 class="card-title">Sentiment: {{ result.sentiment }}</h5>
+        <p class="card-text"><strong>Feedback:</strong> {{ result.text }}</p>
+        <p class="card-text">
+          <strong>Category:</strong> {{ result.category }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

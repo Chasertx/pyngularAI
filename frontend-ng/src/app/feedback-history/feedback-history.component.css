@@ -1,0 +1,7 @@
+.theme {
+  background: var(--background-gradient);
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 50px;
+}

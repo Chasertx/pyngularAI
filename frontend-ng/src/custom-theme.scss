@@ -1,0 +1,23 @@
+:root {
+  --background-gradient: linear-gradient(to bottom, #004e7c, #007d8b);
+  --text-color: #ffffff;
+  --secondary-text-color: #00e5ff;
+  --subtitle-text-color: #a2dbe2;
+  --primary-color: #007d8b;
+  --secondary-color: #004e7c;
+  --primary-button-color: #ff6b3d;
+  --card-background-color: #002d4d;
+  --tool-bar-background-color: #003f66;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #90caf9;
+  --accent-color: #f48fb1;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

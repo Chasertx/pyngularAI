@@ -1,0 +1,23 @@
+<mat-toolbar class="hometoolbar" color="primary">
+  <button mat-button [routerLink]="['/']" class="home-button bigtext">
+    The AI Hub
+  </button>
+  <span class="spacer"></span>
+  <button mat-button [routerLink]="['/services']" class="nav-button">
+    Services
+  </button>
+  <button mat-button [routerLink]="['/']" class="nav-button">Repository</button>
+  <button mat-button [routerLink]="['/contact']" class="nav-button">
+    Contact Us
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown">
+    <button mat-button class="dropdown-button">More</button>
+    <div class="dropdown-content">
+      <a [routerLink]="['/feedback']">Feedback Sentiment Analysis</a>
+      <a [routerLink]="['/history']">Feedback History</a>
+      <a [routerLink]="['/']">Services</a>
+    </div>
+  </div>
+</mat-toolbar>

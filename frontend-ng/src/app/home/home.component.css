@@ -1,0 +1,183 @@
+/* === Theme === */
+.theme {
+  background: var(--background-gradient);
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 50px;
+}
+
+/* Toolbar Styling */
+.hometoolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: var(--tool-bar-background-color) !important;
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Spacer to push buttons to the right */
+.spacer {
+  flex: 1; /* Takes up all available space to push buttons to the right */
+}
+
+/* Navigation Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 24px; /* Space between buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* === Toolbar Text === */
+.bigtext {
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* === Navigation Buttons === */
+.nav-button {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 12px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-button-color); /* Accent color on hover */
+  color: var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* === Dropdown Menu === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: var(--primary-button-color); /* Accent color on hover */
+  color: var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #003f66;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  border-radius: 8px;
+  padding: 8px 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-button-color); /* Accent color on hover */
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: transparent;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  background-color: var(--primary-button-color) !important;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #ff4d1b !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+}
+
+/* === Card Section === */
+.content {
+  padding: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slightly lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+mat-card-title {
+  font-size: 20px;
+  color: var(--secondary-text-color);
+}
+
+mat-card-subtitle {
+  color: var(--subtitle-text-color);
+  font-weight: 500;
+  margin-bottom: 12px;
+}

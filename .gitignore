@@ -1,0 +1,20 @@
+# Angular
+node_modules/
+dist/
+.angular/
+
+# Environment files
+src/environments/*.ts
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+env/
+venv/
+.env
+db.sqlite3
+
+# VSCode
+.vscode/
