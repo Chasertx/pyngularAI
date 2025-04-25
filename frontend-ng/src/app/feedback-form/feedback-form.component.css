@@ -8,7 +8,7 @@
 
 /* Feedback Form Container */
 .feedback-container {
-  max-width: 600px;
+  max-width: 50%;
   margin: 40px auto;
   padding: 20px;
   background-color: var(--card-background-color);
@@ -16,6 +16,10 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  resize: both; /* Allow resizing both horizontally and vertically */
+  overflow: auto; /* Ensure content remains scrollable if resized smaller */
+  min-width: 300px; /* Prevent the container from becoming too small */
+  min-height: 200px; /* Prevent the container from becoming too small */
 }
 
 /* Feedback Title */

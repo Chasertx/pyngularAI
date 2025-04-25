@@ -1,0 +1,68 @@
+<div class="theme">
+  <app-toolbar></app-toolbar>
+
+  <!-- Database Visualizer Section -->
+  <div class="visualizer-container">
+    <h2 class="visualizer-title">Database Visualizer</h2>
+
+    <div class="visualizer-controls">
+      <div class="control-group">
+        <label for="model-select">Model:</label>
+        <select
+          id="model-select"
+          class="form-select"
+          [(ngModel)]="selectedModel"
+          (change)="onSearchOrModelChange()"
+        >
+          <option *ngFor="let model of models" [value]="model">
+            {{ model }}
+          </option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="search-input">Search:</label>
+        <input
+          id="search-input"
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          (input)="onSearchOrModelChange()"
+          placeholder="Search..."
+        />
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="loading-indicator">Loading...</div>
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+
+    <div *ngIf="data.length" class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th *ngFor="let key of keys">{{ key }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of data">
+            <td *ngFor="let key of keys">{{ row[key] }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination-controls">
+        <button class="cta-button" (click)="prevPage()" [disabled]="page === 1">
+          Previous
+        </button>
+        <span>Page {{ page }}</span>
+        <button
+          class="cta-button"
+          (click)="nextPage()"
+          [disabled]="page * pageSize >= total"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
