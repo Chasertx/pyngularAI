@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 /**
  * facilitates composing asynchronous or callback-based code,
  * making it easier to handle asynchronous events and data streams.
- * Think of it as a way to treat data flow as a stream of information,
- * much like a pipeline
+ * Think of it as a way to treat data flow as a stream of information, much like a pipeline
  */
 import { Observable } from 'rxjs';
 

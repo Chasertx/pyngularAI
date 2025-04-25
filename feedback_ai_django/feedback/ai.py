@@ -15,3 +15,13 @@ def analyze_sentiment(text):
     """
     result = sentiment_pipeline(text)[0]
     return result["label"]
+
+#Load Summarizer once (using BART model)
+summarizer = pipeline('summarization', model='facebook/bart-large-cnn')
+
+def summarize_text(text):
+    if len(text.split()) < 30:
+        return "input too short to summarize"
+    
+    summary = summarizer(text, max_length=60, min_length=25, do_sample=False)
+    return summary[0]['summary_text']

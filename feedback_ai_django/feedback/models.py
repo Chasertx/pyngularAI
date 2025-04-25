@@ -10,3 +10,12 @@ class Feedback(models.Model):
     def __str__(self):
         # Makes admin panel and shell easier to read
         return f"{self.text[:30]}... - ({self.sentiment})"
+    
+
+class StorySummarization(models.Model):
+    text = models.TextField()
+    summary = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"StorySummary #{self.id}"
