@@ -1,6 +1,6 @@
 /* Summarizer Container */
 .summarizer-container {
-  max-width: 50%; /* Initial maximum width */
+  max-width: 40%; /* Initial maximum width */
   margin: 40px auto;
   padding: 20px;
   background-color: var(--card-background-color);
@@ -20,6 +20,14 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--secondary-text-color);
+}
+
+/* Summarizer Description */
+.summarizer-description {
+  font-size: 16px;
+  color: var(--subtitle-text-color);
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /* Summarizer Textarea */

@@ -5,6 +5,7 @@ import { FeedbackHistoryComponent } from './feedback-history/feedback-history.co
 import { HomeComponent } from './home/home.component';
 import { StorySummarizerComponent } from './story-summarizer/story-summarizer.component';
 import { DatabaseVisualizerComponent } from './database-visualizer/database-visualizer.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'feedback', component: FeedbackFormComponent },
   { path: 'summarizer', component: StorySummarizerComponent },
   { path: 'database', component: DatabaseVisualizerComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' },
 ];
